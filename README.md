@@ -32,13 +32,17 @@ Running `npm test` will execute the tests in the `test` directory using mocha.
 
 ### @TODO (in the near future)
 - Add any useful Restisy plugins for a real world application.
-- Add dynamic loading of routes instead of using a configuartion array.
-- Use gulp or grunt for having some development goodies like file watching and linters.
-- Use ECMA6 as much as possible.
-- Add some ACL module. 
-- Add some caching module.
+- Add dynamic loading of routes instead of using a configuration array.
+- Integrate PassportJS (at least local and jwt).
 - Integrate mongoose.
+- Use gulp or grunt for having some development goodies like file watching and linters.
+- Use ECMA6 as much as possible. 
+
+
  
 ### @TODO (in the not so near future)
 - Provide sample pm2 scripts and configurations (including service instalation in linux).
-- Provide sample Nginx configurations
+- Provide sample Nginx configurations.
+- Add some ACL module.
+- Add some caching module.
+- Integrate sequelizejs.
