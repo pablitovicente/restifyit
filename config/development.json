@@ -1,0 +1,10 @@
+{
+  "server": {
+    "port": 8000,
+    "name": "Restify Boiler Plate"
+  },
+  "logging": {
+    "dir": "logs",
+    "level": "debug"
+  }
+}
