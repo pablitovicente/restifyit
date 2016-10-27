@@ -1,11 +1,9 @@
-/* global process:true, __dirname:true */
-
 'use strict';
 
-var path    = require('path'),
-    restify = require('restify'),
-    config  = require('config'),
-    routes  = require('./routes');
+const path = require('path');
+const restify = require('restify');
+const config  = require('config');
+const routes  = require('./routes');
 
 
 exports.createServer = createServer;
@@ -17,15 +15,17 @@ exports.createServer = createServer;
  */
 function createServer (logger) {
 
-  var settings = {
+  let settings = {
     name: (config.has('server.name') && config.get('server.name'))
             ? config.get('server.name')
             : require(path.join(__dirname, 'package')).name
   };
 
-  if (logger) settings.log = logger;
+  if (logger) {
+    settings.log = logger;
+  }
 
-  var server = restify.createServer(settings);
+  let server = restify.createServer(settings);
 
   server.use(restify.acceptParser(server.acceptable));
   server.use(restify.queryParser());
@@ -36,10 +36,11 @@ function createServer (logger) {
     }
     res.send(404, req.url + ' was not found');
   });
-  
-  if (logger) server.on('after', restify.auditLogger({ log: logger }));
-  
+
+  if (logger) {
+    server.on('after', restify.auditLogger({log: logger}));
+  }
+
   routes(server, logger);
-  
   return server;
 }
