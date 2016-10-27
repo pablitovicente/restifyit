@@ -26,7 +26,7 @@ module.exports = function(server, logger) {
       try {
         require(path.join(__dirname, route))(server, logger);
       } catch (err) {
-        throw new Error("Can't load '" + route + "' route");
+        throw new Error('Can\'t load "' + route + '" route. Check the file: ' + __dirname + '/' + route);
       }
     });
   });
