@@ -1,20 +1,21 @@
 {
-  "name":    "restify-boiler-plate",
+  "name": "restify-boiler-plate",
   "version": "0.0.1",
   "private": true,
-  "main":    "server.js",
+  "main": "server.js",
   "scripts": {
-    "start":  "node server.js",
-    "test":   "./node_modules/.bin/mocha -R spec test/server.js test/**/*.js"
+    "start": "node server.js",
+    "test": "./node_modules/.bin/mocha -R spec test/server.js test/**/*.js"
   },
   "dependencies": {
-    "restify": "4.1.1",
-    "bunyan":  "1.8.3",
-    "config":  "1.21.0"
+    "bunyan": "1.8.3",
+    "config": "1.21.0",
+    "lodash": "^4.16.4",
+    "restify": "4.1.1"
   },
   "devDependencies": {
-    "mocha":     "3.1.2",
-    "chai":      "3.5.0",
+    "mocha": "3.1.2",
+    "chai": "3.5.0",
     "supertest": "2.0.0",
     "bunyan-prettystream": "0.1.3"
   },

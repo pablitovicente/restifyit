@@ -29,6 +29,7 @@ coverage/
 *.tmp
 *.bak
 *.swp
+logs/
 
 # Sublime editor
 # ==============

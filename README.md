@@ -46,3 +46,4 @@ Running `npm test` will execute the tests in the `test` directory using mocha.
 - Add some ACL module.
 - Add some caching module.
 - Integrate sequelizejs.
+- Integrate Socket.io, some authentication example with it plus a simple example protocol. 
