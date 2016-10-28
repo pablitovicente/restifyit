@@ -90,6 +90,10 @@
         "after": true
       }
     ],
+    "no-unexpected-multiline": 1,
+    "one-var-declaration-per-line": 2,
+    "arrow-parens": [1, "as-needed"],
+    "arrow-body-style": ["error", "always"],
     "space-unary-ops": 2,
     "no-var": 2, // require let or const instead of var (off by default)
     "generator-star-spacing": [2, "before"] // enforce the spacing around the * in generator functions (off by default)

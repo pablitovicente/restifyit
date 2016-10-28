@@ -1,12 +1,10 @@
-/* global describe:true, before:true, after:true, it:true, baseURL:true */
-
 'use strict';
 
-var should  = require('chai').should(),
-    request = require('supertest');
+const should  = require('chai').should();
+const request = require('supertest');
 
 
-describe("/ping", function () {
+describe('/ping', function () {
 
   it('should return an object including status and uptime', function (done) {
     request(baseURL)

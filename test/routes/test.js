@@ -1,12 +1,10 @@
-/* global describe:true, before:true, after:true, it:true, baseURL:true */
-
 'use strict';
 
-var should  = require('chai').should(),
-    request = require('supertest');
+const should  = require('chai').should();
+const request = require('supertest');
 
 
-describe("/test", function () {
+describe('/test', function () {
 
   it('should return { "result": "test" }', function (done) {
     request(baseURL)
@@ -15,13 +13,15 @@ describe("/test", function () {
       .expect('Content-Type', 'application/json')
       .expect(200)
       .end(function (err, res) {
-        if (err) return done(err);
-        
-        res.body.should.be.an('object');
-        res.body.should.have.ownProperty('result');
-        res.body.result.should.equal("test");
-        
-        return done();
+        if (err){
+          return done(err);
+        } else {
+          res.body.should.be.an('object');
+          res.body.should.have.ownProperty('result');
+          res.body.result.should.equal('test');
+
+          return done();
+        }
       });
   });
 

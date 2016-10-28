@@ -1,20 +1,19 @@
-/* global describe:true, before:true, after:true, it:true, global:true,
-   baseURL:true, process:true */
+'use strict';
 
-var config       = require('config'),
-    app          = require('../app'),
-    bunyan       = require('bunyan'),
-    PrettyStream = require('bunyan-prettystream'),
-    request      = require('supertest');
+const config       = require('config');
+const app          = require('../app');
+const bunyan       = require('bunyan');
+const PrettyStream = require('bunyan-prettystream');
+const request      = require('supertest');
 
-var server;
+let server;
 
 before(function (done) {
 
-  var bunyanToConsole = new PrettyStream();
+  const bunyanToConsole = new PrettyStream();
   bunyanToConsole.pipe(process.stdout);
-  
-  var logger = bunyan.createLogger({
+
+  const logger = bunyan.createLogger({
     name: 'testLogger',
     streams: [{
       level: 'error',
@@ -22,15 +21,15 @@ before(function (done) {
       stream: bunyanToConsole
     }]
   });
-  
+
   server = app.createServer(logger);
-  
+
   // start listening
-  var port = config.get('server.port');
+  const port = config.get('server.port');
   server.listen(port, function () {
     logger.info('%s listening at %s', server.name, server.url);
   });
-  
+
   global.baseURL = 'http://localhost:' + port;
 
   // make sure the server is started

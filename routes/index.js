@@ -7,7 +7,7 @@ const _ = require('lodash');
 
 function initialize(server, logger) {
   server.get('/ping', function (req, res, next) {
-    res.send({ status: 'ok', uptime: process.uptime(), requestsServerd: 0 });
+    res.send({status: 'ok', uptime: process.uptime(), requestsServerd: 0});
     return next();
   });
 }
@@ -20,7 +20,9 @@ module.exports = function(server, logger) {
 
 
   fs.readdir(__dirname, (err, routes) => {
-    _.remove(routes, (aRoute) => { return aRoute === 'index.js'? aRoute : false }); // Omit index by now this might change as this evolves
+    _.remove(routes, (aRoute) => {
+      return aRoute === 'index.js'? aRoute : false;
+    }); // Omit index by now this might change as this evolves
 
     routes.forEach(function (route) {
       try {
