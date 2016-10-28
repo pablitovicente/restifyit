@@ -10,7 +10,6 @@ use newest versions of the modules and move all the code to ECMA6)
 - [bunyan](https://github.com/trentm/node-bunyan) for logging
 - [mocha](http://visionmedia.github.io/mocha/) and [supertest](
   https://github.com/visionmedia/supertest) for testing
-- [cluster](http://nodejs.org/docs/latest/api/cluster.html) for managing workers
 
 ### Configuring
 See `config/local.json5.example` for a sample to get you started. If you need to
