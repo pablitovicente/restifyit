@@ -8,7 +8,7 @@ use newest versions of the modules and move all the code to ECMA6)
 
 - [config](https://github.com/lorenwest/node-config) for configuration
 - [bunyan](https://github.com/trentm/node-bunyan) for logging
-- [mocha](http://visionmedia.github.io/mocha/) and [supertest](
+- [mocha](http://mochajs.org/) and [supertest](
   https://github.com/visionmedia/supertest) for testing
 
 ### Configuring
